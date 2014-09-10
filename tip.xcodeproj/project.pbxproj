@@ -13,6 +13,7 @@
 		450962D419B82099008DA915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450962D219B82099008DA915 /* Main.storyboard */; };
 		450962D619B82099008DA915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450962D519B82099008DA915 /* Images.xcassets */; };
 		450962E219B82099008DA915 /* tipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 450962E119B82099008DA915 /* tipTests.m */; };
+		45BAD5FE19BEBF07004E07FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BAD5FD19BEBF07004E07FC /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		450962DB19B82099008DA915 /* tipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		450962E019B82099008DA915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		450962E119B82099008DA915 /* tipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tipTests.m; sourceTree = "<group>"; };
+		45BAD5FC19BEBF07004E07FC /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		45BAD5FD19BEBF07004E07FC /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				450962D219B82099008DA915 /* Main.storyboard */,
 				450962D519B82099008DA915 /* Images.xcassets */,
 				450962C819B82099008DA915 /* Supporting Files */,
+				45BAD5FC19BEBF07004E07FC /* SettingsViewController.h */,
+				45BAD5FD19BEBF07004E07FC /* SettingsViewController.m */,
 			);
 			path = tip;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				450962D119B82099008DA915 /* ViewController.m in Sources */,
 				450962CE19B82099008DA915 /* AppDelegate.m in Sources */,
 				450962CB19B82099008DA915 /* main.m in Sources */,
+				45BAD5FE19BEBF07004E07FC /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -320,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -332,9 +338,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = tip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tip/tip-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -343,9 +354,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = tip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tip/tip-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -362,8 +377,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = tipTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos7.1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tip.app/tip";
 			};
 			name = Debug;
@@ -377,8 +394,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = tipTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos7.1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tip.app/tip";
 			};
 			name = Release;
@@ -402,6 +421,7 @@
 				450962E719B82099008DA915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		450962E819B82099008DA915 /* Build configuration list for PBXNativeTarget "tipTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +430,7 @@
 				450962EA19B82099008DA915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
